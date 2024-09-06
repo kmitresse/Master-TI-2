@@ -56,7 +56,7 @@ git checkout branche_secondaire
 # Effectuer un rebasesur la branche souhaité (ex: branche principale)
 git rebase branche_principale
 ```
-![rebase](rebase.png)
+![rebase](images/rebase.png)
 ___Remarque___ : Rebase une branche peut apporter son lot de problèmes. En effet, si vous avez modifier les mêmes sections de code sur les mêmes fichiers sur les deux branches il va falloir réparer toutes les conflits entre temps.
 
 ___Astuce___ : N'hesitez pas à demander de l'aide ;)
@@ -71,6 +71,6 @@ git checkout branche_secondaire
 git merge branche_principale --rebase
 ```
 
-![merge](merge.png)
+![merge](images/merge.png)
 
 ___Remarque___ : Par sécurité, il vaut mieux toujours faire une "merge request" directement sur gitLab (ou gitHub) au lieu de merge directement. Cela permet d'ajouter des "reviewer" qui permettront la merge. Vaut mieux avoir plusieurs fautifs qu'un seul ;)
