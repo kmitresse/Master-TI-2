@@ -1,0 +1,10 @@
+keystore "keystore.jks";
+
+grant signedBy "KeyAlias" {
+  permission java.io.FilePermission "${user.home}${/}Documents${/}Github${/}SecuriteSystemesInfo${/}revision${/}tp1${/}partie5${/}client${/}Source_Signed.jar", "read, execute";
+};
+
+grant codeBase "file:${user.home}${/}Documents${/}Github${/}SecuriteSystemesInfo${/}revision${/}tp1${/}partie5${/}client${/}Source_Signed.jar" {
+  permission "java.util.PropertyPermission" "user.home", "read";
+  permission "java.util.PropertyPermission" "java.home", "read";
+};

@@ -1,0 +1,9 @@
+keystore "./client/keystore.jks"
+
+grant signedBy "KeyAlias" {
+	permission java.io.FilePermission "${user.home}${/}PauUniversty/Master-TI-2/security/Notes/Example/Client/Source_Signed.jar", "read, execute";
+};
+
+grant codeBase "file:/home/kmitresse/PauUniversity/Master-TI-2/security/Notes/" {
+    permission java.util.PropertyPermission "user.home", "read";
+};

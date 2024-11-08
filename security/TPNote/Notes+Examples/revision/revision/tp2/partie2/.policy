@@ -1,0 +1,7 @@
+grant codebase "file:./SampleLM.jar" {
+    permission javax.security.auth.AuthPermission "modifyPrincipals";
+};
+
+grant codebase "file:./SampleAcn.jar" {
+   permission javax.security.auth.AuthPermission "createLoginContext.Sample";
+};
