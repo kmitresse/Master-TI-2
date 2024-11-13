@@ -7,16 +7,45 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import fr.univpau.intention.listeners.NextButtonListener;
+
 public class A2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all);
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(v -> {
-            // Start the activity A2
-            startActivity(new Intent(this, A3.class));
-        });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener( new NextButtonListener(this, A3.class));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(null);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(null);
+    }
+
 }
